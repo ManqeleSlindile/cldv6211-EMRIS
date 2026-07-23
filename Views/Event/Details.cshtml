@@ -1,0 +1,69 @@
+﻿@model EventEase.Models.Event
+
+@{
+    ViewData["Title"] = "Event Details";
+}
+
+<h1>Event Details</h1>
+
+<hr />
+
+<dl class="row">
+
+    <dt class="col-sm-3">
+        Event Name
+    </dt>
+
+    <dd class="col-sm-9">
+        @Model.EventName
+    </dd>
+
+    <dt class="col-sm-3">
+        Start Date
+    </dt>
+
+    <dd class="col-sm-9">
+        @Model.StartDate.ToString("dd MMM yyyy HH:mm")
+    </dd>
+
+    <dt class="col-sm-3">
+        End Date
+    </dt>
+
+    <dd class="col-sm-9">
+        @Model.EndDate.ToString("dd MMM yyyy HH:mm")
+    </dd>
+
+    <dt class="col-sm-3">
+        Event Type
+    </dt>
+
+    <dd class="col-sm-9">
+        @Model.EventType?.Name
+    </dd>
+
+    <dt class="col-sm-3">
+        Venue
+    </dt>
+
+    <dd class="col-sm-9">
+        @Model.Venue?.VenueName
+    </dd>
+
+    <dt class="col-sm-3">
+        Description
+    </dt>
+
+    <dd class="col-sm-9">
+        @Model.Description
+    </dd>
+
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.EventID" class="btn btn-warning">
+    Edit
+</a>
+
+<a asp-action="Index" class="btn btn-secondary">
+    Back
+</a>

@@ -1,0 +1,187 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid">
+
+    <!-- Welcome Section -->
+    <div class="rounded-4 p-5 mb-5 text-white shadow"
+         style="background: linear-gradient(135deg, #9F1239, #6B21A8);">
+
+        <h1 class="display-5 fw-bold">
+            Welcome to Event Ease SolutionsX
+        </h1>
+
+        <p class="lead mt-3">
+            Your cloud-based event management platform for managing
+            venues, events and bookings efficiently.
+        </p>
+
+        <hr class="border-light opacity-50" />
+
+        <div class="row mt-4">
+
+            <div class="col-md-3 mb-3">
+                <a asp-controller="Event"
+                   asp-action="Create"
+                   class="btn btn-light w-100 py-3 fw-semibold">
+                    <i class="bi bi-plus-circle-fill me-2"></i>
+                    Create Event
+                </a>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <a asp-controller="Venue"
+                   asp-action="Create"
+                   class="btn btn-light w-100 py-3 fw-semibold">
+                    <i class="bi bi-building-add me-2"></i>
+                    Add Venue
+                </a>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <a asp-controller="Booking"
+                   asp-action="Create"
+                   class="btn btn-light w-100 py-3 fw-semibold">
+                    <i class="bi bi-ticket-perforated-fill me-2"></i>
+                    Create Booking
+                </a>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <a asp-controller="Event"
+                   asp-action="Index"
+                   class="btn btn-outline-light w-100 py-3 fw-semibold">
+                    <i class="bi bi-calendar-event me-2"></i>
+                    View Events
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Dashboard Cards -->
+    <div class="row g-4">
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+                <div class="card-body text-center p-4">
+
+                    <div class="mb-3 text-danger">
+                        <i class="bi bi-calendar-event-fill display-4"></i>
+                    </div>
+
+                    <h4 class="fw-bold">Events</h4>
+
+                    <p class="text-muted">
+                        Create, edit and manage all events.
+                    </p>
+
+                    <a asp-controller="Event"
+                       asp-action="Index"
+                       class="btn btn-outline-danger">
+                        Manage
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+                <div class="card-body text-center p-4">
+
+                    <div class="mb-3 text-danger">
+                        <i class="bi bi-geo-alt-fill display-4"></i>
+                    </div>
+
+                    <h4 class="fw-bold">Venues</h4>
+
+                    <p class="text-muted">
+                        View and manage available venues.
+                    </p>
+
+                    <a asp-controller="Venue"
+                       asp-action="Index"
+                       class="btn btn-outline-danger">
+                        Manage
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+                <div class="card-body text-center p-4">
+
+                    <div class="mb-3 text-danger">
+                        <i class="bi bi-ticket-fill display-4"></i>
+                    </div>
+
+                    <h4 class="fw-bold">Bookings</h4>
+
+                    <p class="text-muted">
+                        Create and manage event bookings.
+                    </p>
+
+                    <a asp-controller="Booking"
+                       asp-action="Index"
+                       class="btn btn-outline-danger">
+                        Manage
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+                <div class="card-body text-center p-4">
+
+                    <div class="mb-3" style="color:#6B21A8;">
+                        <i class="bi bi-tags-fill display-4"></i>
+                    </div>
+
+                    <h4 class="fw-bold">Event Types</h4>
+
+                    <p class="text-muted">
+                        Organise events by category.
+                    </p>
+
+                    <a asp-controller="Event"
+                       asp-action="Index"
+                       class="btn text-white"
+                       style="background:#6B21A8;">
+                        View
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- About System -->
+    <div class="card border-0 shadow-sm rounded-4 mt-5">
+
+        <div class="card-body p-5">
+
+            <h3 class="fw-bold mb-3">
+                About Event Ease SolutionsX
+            </h3>
+
+            <p class="text-muted mb-0">
+                Event Ease SolutionsX is a cloud-based event management system
+                designed to simplify venue management, event planning and booking
+                administration. The application allows users to create events,
+                manage venues, organise bookings and categorise events by type
+                through an easy-to-use interface.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
